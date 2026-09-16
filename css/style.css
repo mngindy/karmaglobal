@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #2563eb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e2e8f0;
+  margin-top: 3rem;
+  color: #64748b;
+}
+/* Styling for Products Page */
+.page-header {
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.page-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1.5rem;
+  border-bottom: 3px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  color: #1e293b;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #cbd5e1; /* Placeholder grey color when no image is loaded */
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h4 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.category {
+  display: inline-block;
+  background-color: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.specs {
+  list-style: none;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.specs li {
+  margin-bottom: 0.4rem;
+}
+/* --- EXPORT PROCESS STYLES --- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #2563eb;
+}
+
+.step-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-right: 1.5rem;
+  line-height: 1;
+}
+
+.step-content h3 {
+  font-size: 1.4rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.cta-banner {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.cta-banner h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #94a3b8;
+}
+/* --- CERTIFICATIONS PAGE STYLES --- */
+.cert-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #475569;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cert-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+
+.cert-badge {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.cert-card h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.cert-card p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.compliance-box {
+  background-color: #f1f5f9;
+  border-left: 4px solid #10b981;
+  padding: 2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.compliance-box h3 {
+  color: #0f172a;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.doc-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.doc-list li {
+  font-size: 0.95rem;
+  color: #334155;
+}
+/* --- ABOUT & CONTACT PAGE STYLES --- */
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #334155;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+}
