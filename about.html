@@ -8,23 +8,34 @@
 </head>
 <body>
 
-  <header>
-    <h1>Karma Global</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="export-process.html">Export Process</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <<header>
+  <h1>Karma Global</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="export-process.html">Export Process</a>
+    <a href="certificates.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- CUSTOM LANGUAGE SELECTOR -->
+<div class="lang-selector">
+  <button class="lang-btn">🌐 Language ▾</button>
+  <div class="lang-dropdown">
+    <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
+    <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
+    <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
+  </div>
+</div>
+
+<!-- Hidden Google Translate Element -->
+<div id="google_translate_element" style="display:none;"></div>
+</header>
 
   <!-- Main content goes here for each specific page -->
 
-  <footer>
-    <p>&copy; 2026 Karma Global. All rights reserved.</p>
-  </footer>
+
 
 </body>
 </html>
@@ -38,22 +49,16 @@
 </head>
 <body>
 
-  <header>
-    <h1>Karma Global</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="products.html">Products</a>
-      <a href="export-process.html">Export Process</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <section class="page-header">
-    <h2>About Karma Global</h2>
-    <p>Connecting global markets with premium fresh produce.</p>
-  </section>
+  <section class="page-header about-header">
+  <h2>About Karma Global</h2>
+  <p>Leading Egyptian exporter committed to agricultural excellence and global standards.</p>
+</section>
+  <div class="management-section" style="margin-top: 2rem; background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2563eb;">
+  <h3>Executive Leadership</h3>
+  <p><strong>Dr. Khaled Abd Elrashed</strong></p>
+  <p style="color: #64748b; font-weight: 500;">General Manager</p>
+  <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #475569;">
+     Email: <a href="mailto:kh@karmaglobal.net">kh@karmaglobal.net</a>
 
   <main class="container">
     <div class="about-section">
@@ -73,9 +78,56 @@
     </div>
   </main>
 
-  <footer>
+  </p>
+</div>
+    <footer>
+  <div class="footer-content">
+    <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>
+    <p>Phone: +20 100 000 0000 | Email: info@karmaglobal.net</p>
     <p>&copy; 2026 Karma Global. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>
 
+<!<!-- Google Translate Script with Language Persistence -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ar,en,fr',
+      autoDisplay: false
+    }, 'google_translate_element');
+
+    // Automatically apply stored language once Google Translate initializes
+    var savedLang = localStorage.getItem('selectedLanguage');
+    if (savedLang && savedLang !== 'en') {
+      applyTranslation('en|' + savedLang);
+    }
+  }
+
+  function doGTranslate(lang_pair) {
+    if (lang_pair.value) lang_pair = lang_pair.value;
+    if (lang_pair == '') return;
+
+    var lang = lang_pair.split('|')[1];
+
+    // Save the selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+
+    applyTranslation(lang_pair);
+  }
+
+  function applyTranslation(lang_pair) {
+    var lang = lang_pair.split('|')[1];
+    var teCombo = document.querySelector('select.goog-te-combo');
+
+    if (teCombo == null || teCombo.innerHTML == '') {
+      setTimeout(function() { applyTranslation(lang_pair); }, 300);
+    } else {
+      teCombo.value = lang;
+      teCombo.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

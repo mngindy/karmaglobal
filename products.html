@@ -8,23 +8,32 @@
 </head>
 <body>
 
-  <header>
-    <h1>Karma Global</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="export-process.html">Export Process</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <<header>
+  <h1>Karma Global</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="export-process.html">Export Process</a>
+    <a href="certificates.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- CUSTOM LANGUAGE SELECTOR -->
+<div class="lang-selector">
+  <button class="lang-btn">🌐 Language ▾</button>
+  <div class="lang-dropdown">
+    <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
+    <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
+    <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
+  </div>
+</div>
+
+<!-- Hidden Google Translate Element -->
+<div id="google_translate_element" style="display:none;"></div>
+</header>
 
   <!-- Main content goes here for each specific page -->
-
-  <footer>
-    <p>&copy; 2026 Karma Global. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
@@ -38,24 +47,11 @@
 </head>
 <body>
 
-  <!-- NAVIGATION HEADER -->
-  <header>
-    <h1>Karma Global</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html" class="active">Products</a>
-      <a href="export-process.html">Export Process</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
   <!-- PAGE HEADER HERO -->
-  <section class="page-header">
-    <h2>Our Fresh Produce Catalog</h2>
-    <p>Premium quality fruits and vegetables sourced from certified global growers.</p>
-  </section>
+  <section class="page-header products-header">
+  <h2>Our Fresh Produce Catalog</h2>
+  <p>Premium quality fruits and vegetables sourced from certified global growers.</p>
+</section>
 
   <!-- MAIN CATALOG CONTENT -->
   <main class="container">
@@ -66,13 +62,13 @@
 
       <!-- Product Card 1 -->
       <div class="product-card">
-        <img src="images/valencia-orange.jpg" alt="Valencia Oranges" class="product-img">
+        <img src="images/strawberry.jpg" alt="strawberry" class="product-img">
         <div class="product-info">
-          <h4>Valencia Oranges</h4>
-          <span class="category">Citrus</span>
-          <p class="desc">Juicy and sweet citrus, ideal for both fresh consumption and juice processing.</p>
+          <h4>strawberry</h4>
+          <span class="category">aggregate accessory fruit</span>
+          <p class="desc">Grown in the rich, fertile soils along the Nile Delta, Egyptian strawberries are world-renowned for their vibrant ruby color, balanced sweetness, and exceptional aroma. Harvested during the winter months when global supply is scarce, our fresh strawberries are carefully hand-picked, sorted, and packed to ensure optimum firmness and peak flavor upon arrival. Perfect for fresh desserts, snacking, beverages, or culinary garnishes.</p>
           <ul class="specs">
-            <li><strong>Season:</strong> February – June</li>
+            <li><strong>Season:</strong> November to April</li>
             <li><strong>Packaging:</strong> 15kg Telescopic Cartons / Open-top</li>
             <li><strong>Container Load:</strong> 24 Tons (Reefer 40ft)</li>
           </ul>
@@ -81,13 +77,18 @@
 
       <!-- Product Card 2 -->
       <div class="product-card">
-        <img src="images/navel-orange.jpg" alt="Navel Oranges" class="product-img">
+        <img src="images/sweet-potato-1.jpg" alt="sweet & potato" class="product-img">
         <div class="product-info">
-          <h4>Navel Oranges</h4>
-          <span class="category">Citrus</span>
-          <p class="desc">Seedless, easy to peel with rich flavor and high vitamin content.</p>
+          <h4>Sweet-potato</h4>
+          <span class="category">tuberous root</span>
+          <p class="desc">Grown in the ideal climate and rich soil along the Nile Delta, Egyptian sweet potatoes are globally prized for their high sugar content, deep orange flesh, and flawless appearance. Carefully harvested and professionally cured to lock in natural sweetness and enhance shelf life, our sweet potatoes deliver excellent texture whether baked, roasted, or processed. They are an exceptional choice for both fresh retail and commercial food production.</p>
           <ul class="specs">
-            <li><strong>Season:</strong> November – March</li>
+            <li><strong>Season:</strong> July - December/April</li>
+            <li><strong>Types:</strong> Beauregard,Bellevue</li>
+            <li><strong>Skin color:</strong> copper/Red</li>
+            <li><strong>Pulp color:</strong> orange/yellow/white</li>
+            <li><strong>Class:</strong> 1 & 2</li>
+            <li><strong>Size:</strong> S/M/L1/L2/XL</li>
             <li><strong>Packaging:</strong> 15kg / 10kg Cartons</li>
             <li><strong>Container Load:</strong> 24 Tons (Reefer 40ft)</li>
           </ul>
@@ -96,20 +97,20 @@
 
       <!-- Product Card 3 -->
       <div class="product-card">
-        <img src="images/pomegranate.jpg" alt="Fresh Pomegranate" class="product-img">
+        <img src="images/Eureka Limon.jpg" alt="Eureka limon" class="product-img">
         <div class="product-info">
-          <h4>Fresh Pomegranate</h4>
+          <h4>Eureka limon</h4>
           <span class="category">Fresh Fruit</span>
-          <p class="desc">Deep red arils with high juice content and excellent shelf life.</p>
+          <p class="desc">Our fresh Eureka lemons are the gold standard of citrus. Characterized by their vibrant yellow skin, pronounced nipple at the end, and brilliant aroma, Eureka lemons offer a high juice content with a bold, crisp acidity. Whether you are zesting for baked goods or squeezing fresh juice into cocktails and dressings, Eureka delivers consistent quality and rich, punchy flavor.</p>
           <ul class="specs">
-            <li><strong>Season:</strong> September – December</li>
-            <li><strong>Packaging:</strong> 4.5kg / 5kg Plastic or Open-top Cartons</li>
-            <li><strong>Container Load:</strong> 18 – 20 Tons</li>
+            <li><strong>Season:</strong> November – April</li>
+            <li><strong>Packaging:</strong> 15kg Plastic or Open-top Cartons</li>
+            <li><strong>Container Load:</strong> 25 Tons</li>
           </ul>
         </div>
       </div>
 
-      <!-- Product Card 4 -->
+      <!-- Product Card 4
       <div class="product-card">
         <img src="images/grapes.jpg" alt="Table Grapes" class="product-img">
         <div class="product-info">
@@ -122,30 +123,45 @@
             <li><strong>Container Load:</strong> 15 Tons (Reefer 40ft)</li>
           </ul>
         </div>
-      </div>
-
-    </div>
-
-    <!-- VEGETABLES SECTION -->
-    <h3 class="section-title">Fresh Vegetables</h3>
-    <div class="product-grid">
-
-      <!-- Product Card 5 -->
+      </div>-->
+      <!-- Product Card 5
       <div class="product-card">
-        <img src="images/yellow-onion.jpg" alt="Yellow & Red Onions" class="product-img">
+        <img src="images/Blood-Orange.jpg" alt="Blood & Orange" class="product-img">
         <div class="product-info">
-          <h4>Golden & Red Onions</h4>
-          <span class="category">Vegetables</span>
-          <p class="desc">Properly cured bulbs with thick dry skins for long-distance export shipping.</p>
+          <h4>Blood-Orange</h4>
+          <span class="category">Fresh Fruit</span>
+          <p class="desc">Seedless varieties grown under controlled agricultural standards.</p>
           <ul class="specs">
-            <li><strong>Season:</strong> April – August</li>
-            <li><strong>Packaging:</strong> 10kg / 25kg Mesh Bags</li>
-            <li><strong>Container Load:</strong> 25 – 27 Tons</li>
+            <li><strong>Season:</strong> May – August</li>
+            <li><strong>Packaging:</strong> 4.5kg Cartons (9 carry bags of 500g)</li>
+            <li><strong>Container Load:</strong> 15 Tons (Reefer 40ft)</li>
           </ul>
         </div>
       </div>
 
-      <!-- Product Card 6 -->
+    </div>-->
+
+
+    <!-- VEGETABLES SECTION
+    <h3 class="section-title">Fresh Vegetables</h3>
+    <div class="product-grid">
+
+
+      <!-- Product Card 5
+    <div class="product-card">
+      <img src="images/Golden & Red Onions" alt="Golden & Red Onion" class="product-img">
+      <div class="product-info">
+        <h4>Golden & Red Onions</h4>
+        <span class="category">resh Vegetables</span>
+        <p class="desc">Properly cured bulbs with thick dry skins for long-distance export shipping.</p>
+        <ul class="specs">
+          <li><strong>Season:</strong> April – August</li>
+          <li><strong>Packaging:</strong> 10kg / 25kg Mesh Bags</li>
+          <li><strong>Container Load:</strong> 25 – 27 Tons</li>
+        </ul>
+      </div>
+    </div>-->
+      <!-- Product Card 6
       <div class="product-card">
         <img src="images/garlic.jpg" alt="Fresh Garlic" class="product-img">
         <div class="product-info">
@@ -158,7 +174,7 @@
             <li><strong>Container Load:</strong> 24 Tons</li>
           </ul>
         </div>
-      </div>
+      </div>-->
 
     </div>
 
@@ -166,8 +182,53 @@
 
   <!-- FOOTER -->
   <footer>
+  <div class="footer-content">
+    <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>
+    <p>Phone: +20 100 000 0000 | Email: info@karmaglobal.net</p>
     <p>&copy; 2026 Karma Global. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>
+<!-- Google Translate Script with Language Persistence -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ar,en,fr',
+      autoDisplay: false
+    }, 'google_translate_element');
+
+    // Automatically apply stored language once Google Translate initializes
+    var savedLang = localStorage.getItem('selectedLanguage');
+    if (savedLang && savedLang !== 'en') {
+      applyTranslation('en|' + savedLang);
+    }
+  }
+
+  function doGTranslate(lang_pair) {
+    if (lang_pair.value) lang_pair = lang_pair.value;
+    if (lang_pair == '') return;
+
+    var lang = lang_pair.split('|')[1];
+
+    // Save the selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+
+    applyTranslation(lang_pair);
+  }
+
+  function applyTranslation(lang_pair) {
+    var lang = lang_pair.split('|')[1];
+    var teCombo = document.querySelector('select.goog-te-combo');
+
+    if (teCombo == null || teCombo.innerHTML == '') {
+      setTimeout(function() { applyTranslation(lang_pair); }, 300);
+    } else {
+      teCombo.value = lang;
+      teCombo.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

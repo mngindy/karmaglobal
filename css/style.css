@@ -42,13 +42,77 @@ nav a:hover {
   padding: 5rem 1rem;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
+/* --- HERO SLIDER STYLES (4 SLIDES) --- */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideAnimation 20s infinite; /* 20s total loop for 4 slides */
+}
+
+/* INDIVIDUAL SLIDE IMAGES & DELAYS */
+.slide1 {
+  background-image: url('../images/hero-citrus.jpg');
+  animation-delay: 0s;
+}
+
+.slide2 {
+  background-image: url('../images/hero-lemontree.jpg');
+  animation-delay: 5s;
+}
+
+.slide3 {
+  background-image: url('../images/hero-sweetP.jpg');
+  animation-delay: 10s;
+}
+
+.slide4 {
+  background-image: url('../images/hero-strawberries.jpg'); /* Ensure this filename matches your image */
+  animation-delay: 15s;
+}
+
+/* RECALCULATED KEYFRAMES FOR 4 SLIDES (25% PORTION PER SLIDE) */
+@keyframes slideAnimation {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(15, 23, 42, 0.55);
+  padding: 2.5rem;
+  border-radius: 12px;
+  color: white;
+  max-width: 700px;
+}
+
+.hero-overlay h2 {
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.2rem;
+.hero-overlay p {
+  font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
@@ -89,16 +153,49 @@ footer {
   color: #64748b;
 }
 /* Styling for Products Page */
+/* --- BASE INNER PAGE HEADER --- */
 .page-header {
-  background-color: #0f172a;
+  position: relative;
+  background-color: #0f172a; /* Fallback dark color if image is loading */
+  background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4.5rem 1rem;
 }
 
 .page-header h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.page-header p {
+  font-size: 1.15rem;
+  color: #e2e8f0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- PAGE-SPECIFIC BACKGROUND HERO IMAGES --- */
+.products-header {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/products-hero.jpg');
+}
+
+.about-header {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/about-hero.jpg');
+}
+
+.export-header {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/export-hero.jpg');
+}
+
+.certs-header {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/certs-hero.jpg');
+}
+
+.contact-header {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/contact-hero.jpg');
 }
 
 .section-title {
@@ -355,4 +452,67 @@ footer {
   background: #2563eb;
   color: white;
   border: none;
+}
+#google_translate_element {
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* CLEAN LANGUAGE DROPDOWN */
+.lang-selector {
+  position: relative;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.lang-btn {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 1px solid #334155;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.lang-btn:hover {
+  background-color: #1e293b;
+}
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #1e293b;
+  min-width: 130px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.lang-dropdown a {
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: 0.85rem;
+}
+
+.lang-dropdown a:hover {
+  background-color: #2563eb;
+}
+
+.lang-selector:hover .lang-dropdown {
+  display: block;
+}
+
+/* Hide top Google bar */
+body {
+  top: 0px !important;
+}
+.goog-te-banner-frame {
+  display: none !important;
 }

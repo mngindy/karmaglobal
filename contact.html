@@ -8,23 +8,7 @@
 </head>
 <body>
 
-  <header>
-    <h1>Karma Global</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="export-process.html">Export Process</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
   <!-- Main content goes here for each specific page -->
-
-  <footer>
-    <p>&copy; 2026 Karma Global. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
@@ -38,33 +22,89 @@
 </head>
 <body>
 
-  <header>
-    <h1>Karma Global</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="export-process.html">Export Process</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+  <<header>
+  <h1>Karma Global</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="export-process.html">Export Process</a>
+    <a href="certificates.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <section class="page-header">
-    <h2>Contact & Export Inquiries</h2>
-    <p>Get in touch for order quotes, shipping schedules, and product availability.</p>
-  </section>
+  <!-- CUSTOM LANGUAGE SELECTOR -->
+<div class="lang-selector">
+  <button class="lang-btn">🌐 Language ▾</button>
+  <div class="lang-dropdown">
+    <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
+    <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
+    <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
+  </div>
+</div>
+
+<!-- Hidden Google Translate Element -->
+<div id="google_translate_element" style="display:none;"></div>
+</header>
+
+  <section class="page-header contact-header">
+  <h2>Contact Karma Global</h2>
+  <p>Get in touch with our export team for orders, quotes, and product specifications.</p>
+</section>
 
   <main class="container">
     <div class="contact-grid">
+      <!-- ADD THE ADDRESS & CONTACT DETAILS DIV HERE -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>Address:</strong><br>
+           11 Omar Ibn El-Khattab St., Square 1154,<br>
+           Sheraton, Cairo, Egypt<br>
+           (4th Floor, Apt. 10)</p>
+
+        <p><strong>Phone / WhatsApp:</strong><br>
+           +20 100 000 0000</p>
+
+        <p><strong>Email:</strong><br>
+           info@karmaglobal.net<br>
+           sales@karmaglobal.net</p>
+
+        <p><strong>Website:</strong><br>
+           www.karmaglobal.net</p>
+
+        <p><strong>Working Hours:</strong><br>
+           Sunday – Thursday: 9:00 AM – 5:00 PM (EET)</p>
+      </div>
       
       <div class="contact-info">
-        <h3>Contact Details</h3>
-        <p><strong>Website:</strong> www.karmaglobal.net</p>
-        <p><strong>Email:</strong> info@karmaglobal.net</p>
-        <p><strong>Inquiries:</strong> sales@karmaglobal.net</p>
-        <p><strong>Office Hours:</strong> Mon - Fri, 8:00 AM - 5:00 PM (UTC)</p>
-      </div>
+  <h3>Get in Touch</h3>
+
+  <p><strong>Management:</strong><br>
+     Dr. Khaled Abd Elrashed<br>
+     <small style="color: #64748b;">General Manager</small></p>
+
+  <p><strong>Address:</strong><br>
+     11 Omar Ibn El-Khattab St., Square 1154,<br>
+     Sheraton, Cairo, Egypt<br>
+     (4th Floor, Apt. 10)</p>
+
+  <p><strong>Phone / WhatsApp:</strong><br>
+     <strong>Landline:</strong> <a href="tel:+20222662519">+20 2 2266 2519</a><br>
+     <strong>Mobile:</strong> <a href="tel:+201042176191">+20 104 217 6191</a><br>
+     <strong>Mobile:</strong> <a href="tel:+201214268785">+20 121 426 8785</a></p>
+
+  <p><strong>Email Contacts:</strong><br>
+     General: <a href="mailto:info@karmaglobal.net">info@karmaglobal.net</a><br>
+     Management: <a href="mailto:kh@karmaglobal.net">kh@karmaglobal.net</a></p>
+
+  <p><strong>Websites:</strong><br>
+     <a href="https://www.karmaglobal.net" target="_blank">www.karmaglobal.net</a><br>
+     <a href="https://www.karmaglobalgroup.com" target="_blank">www.karmaglobalgroup.com</a></p>
+
+  <p><strong>Working Hours:</strong><br>
+     Sunday – Thursday: 9:00 AM – 5:00 PM (EET)</p>
+
+</div>
 
       <form class="contact-form">
         <h3>Request an Export Quote</h3>
@@ -94,8 +134,52 @@
   </main>
 
   <footer>
+  <div class="footer-content">
+    <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>
+    <p>Phone: +20 100 000 0000 | Email: info@karmaglobal.net</p>
     <p>&copy; 2026 Karma Global. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>
+<!-- Google Translate Script with Language Persistence -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'ar,en,fr',
+      autoDisplay: false
+    }, 'google_translate_element');
 
+    // Automatically apply stored language once Google Translate initializes
+    var savedLang = localStorage.getItem('selectedLanguage');
+    if (savedLang && savedLang !== 'en') {
+      applyTranslation('en|' + savedLang);
+    }
+  }
+
+  function doGTranslate(lang_pair) {
+    if (lang_pair.value) lang_pair = lang_pair.value;
+    if (lang_pair == '') return;
+
+    var lang = lang_pair.split('|')[1];
+
+    // Save the selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+
+    applyTranslation(lang_pair);
+  }
+
+  function applyTranslation(lang_pair) {
+    var lang = lang_pair.split('|')[1];
+    var teCombo = document.querySelector('select.goog-te-combo');
+
+    if (teCombo == null || teCombo.innerHTML == '') {
+      setTimeout(function() { applyTranslation(lang_pair); }, 300);
+    } else {
+      teCombo.value = lang;
+      teCombo.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
