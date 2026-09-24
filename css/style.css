@@ -34,88 +34,83 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-
-.hero {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: white;
-  text-align: center;
-  padding: 5rem 1rem;
-}
-
-/* --- HERO SLIDER STYLES (4 SLIDES) --- */
+/* HERO SLIDER CONTAINER */
 .hero-slider {
   position: relative;
-  width: 100%;
-  height: 80vh;
+  height: 550px;
   overflow: hidden;
+  color: white;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: slideAnimation 20s infinite; /* 20s total loop for 4 slides */
+.hero-slider .slide.active {
+  opacity: 1;
 }
 
-/* INDIVIDUAL SLIDE IMAGES & DELAYS */
-.slide1 {
-  background-image: url('../images/hero-citrus.jpg');
-  animation-delay: 0s;
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-.slide2 {
-  background-image: url('../images/hero-lemontree.jpg');
-  animation-delay: 5s;
-}
-
-.slide3 {
-  background-image: url('../images/hero-sweetP.jpg');
-  animation-delay: 10s;
-}
-
-.slide4 {
-  background-image: url('../images/hero-strawberries.jpg'); /* Ensure this filename matches your image */
-  animation-delay: 15s;
-}
-
-/* RECALCULATED KEYFRAMES FOR 4 SLIDES (25% PORTION PER SLIDE) */
-@keyframes slideAnimation {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  25% { opacity: 1; }
-  30% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  background: rgba(15, 23, 42, 0.55);
-  padding: 2.5rem;
-  border-radius: 12px;
-  color: white;
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
   max-width: 700px;
 }
 
-.hero-overlay h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
+.btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.hero-overlay p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+.btn:hover {
+  background-color: #1d4ed8;
 }
 
+/* SLIDER ARROWS */
+.prev-slide, .next-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(15, 23, 42, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.prev-slide:hover, .next-slide:hover {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.prev-slide { left: 20px; }
+.next-slide { right: 20px; }
 .btn {
   display: inline-block;
   background: #ffffff;
