@@ -516,3 +516,21 @@ body {
 .goog-te-banner-frame {
   display: none !important;
 }
+/* GOOGLE MAPS EMBED STYLING */
+.map-section {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #cbd5e1;
+}
+
+.map-container iframe {
+  width: 100%;
+  display: block;
+}
