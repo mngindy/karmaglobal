@@ -8,31 +8,33 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Karma Global</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="export-process.html">Export Process</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+ <header>
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Karma Global Logo" class="site-logo">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="export-process.html">Export Process</a>
+    <a href="certificates.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <!-- CUSTOM LANGUAGE SELECTOR -->
-    <div class="lang-selector">
-      <button class="lang-btn">🌐 Language ▾</button>
-      <div class="lang-dropdown">
-        <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
-        <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
-        <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
-      </div>
+  <!-- CUSTOM LANGUAGE SELECTOR -->
+  <div class="lang-selector">
+    <button class="lang-btn">🌐 Language ▾</button>
+    <div class="lang-dropdown">
+      <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
+      <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
+      <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
     </div>
+  </div>
 
-    <!-- Hidden Google Translate Element -->
-    <div id="google_translate_element" style="display:none;"></div>
-  </header>
+  <div id="google_translate_element" style="display:none;"></div>
+</header>
 
   <!-- PAGE HEADER HERO -->
   <section class="page-header products-header">

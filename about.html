@@ -3,69 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karma Global</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <<header>
-  <h1>Karma Global</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="export-process.html">Export Process</a>
-    <a href="certificates.html">Certifications</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- CUSTOM LANGUAGE SELECTOR -->
-<div class="lang-selector">
-  <button class="lang-btn">🌐 Language ▾</button>
-  <div class="lang-dropdown">
-    <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
-    <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
-    <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
-  </div>
-</div>
-
-<!-- Hidden Google Translate Element -->
-<div id="google_translate_element" style="display:none;"></div>
-</header>
-
-  <!-- Main content goes here for each specific page -->
-
-
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karma Global - About Us</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <section class="page-header about-header">
-  <h2>About Karma Global</h2>
-  <p>Leading Egyptian exporter committed to agricultural excellence and global standards.</p>
-</section>
-  <div class="management-section" style="margin-top: 2rem; background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2563eb;">
-  <h3>Executive Leadership</h3>
-  <p><strong>Dr. Khaled Abd Elrashed</strong></p>
-  <p style="color: #64748b; font-weight: 500;">General Manager</p>
-  <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #475569;">
-     Email: <a href="mailto:kh@karmaglobal.net">kh@karmaglobal.net</a>
+  <!-- SITE HEADER -->
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Karma Global Logo" class="site-logo">
+      </a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="export-process.html">Export Process</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-  <main class="container">
+    <!-- CUSTOM LANGUAGE SELECTOR -->
+    <div class="lang-selector">
+      <button class="lang-btn">🌐 Language ▾</button>
+      <div class="lang-dropdown">
+        <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
+        <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
+        <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
+      </div>
+    </div>
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+  </header>
+
+  <!-- PAGE HEADER HERO -->
+  <section class="page-header about-header">
+    <h2>About Karma Global</h2>
+    <p>Leading Egyptian exporter committed to agricultural excellence and global standards.</p>
+  </section>
+
+  <!-- MAIN ABOUT CONTENT -->
+  <main class="container" style="padding: 3rem 1.5rem;">
+
+    <!-- BRAND INTRO BLOCK (LEFT ALIGNED LIKE EXAMPLE) -->
+    <div style="text-align: left; margin-bottom: 2rem;">
+    <img src="images/logo.png" alt="Karma Global Logo" class="body-logo">
+    <h2 style="font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; font-weight: 700;">For Fresh Fruits, Vegetables, and Beans</h2>
+    <p style="color: #64748b; font-size: 1.05rem; max-width: 750px;">Legumes like white beans, kidney beans, and broad beans.</p>
+    </div>
+
+    <!-- EXECUTIVE LEADERSHIP -->
+    <div class="management-section" style="margin-bottom: 2.5rem; background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2563eb; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+      <h3>Executive Leadership</h3>
+      <p style="margin-top: 0.5rem;"><strong>Dr. Khaled Abd Elrashed</strong></p>
+      <p style="color: #64748b; font-weight: 500;">General Manager</p>
+      <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #475569;">
+        Email: <a href="mailto:kh@karmaglobal.net" style="color: #2563eb;">kh@karmaglobal.net</a>
+      </p>
+    </div>
+
+    <!-- COMPANY OVERVIEW & VALUES -->
     <div class="about-section">
       <h3>Our Company Overview</h3>
-      <p>Karma Global is an international trading and export enterprise specializing in premium-quality fresh fruits and vegetables. By combining agricultural expertise with strict cold-chain supply management, we deliver fresh produce to markets worldwide.</p>
+      <p>Karma Global is an international trading and export enterprise specializing in premium-quality fresh fruits, vegetables, and legumes. By combining agricultural expertise with strict supply chain management, we deliver fresh produce to markets worldwide.</p>
 
-      <div class="vision-mission-grid">
+      <div class="vision-mission-grid" style="margin-top: 2rem;">
         <div class="card">
           <h3>Our Mission</h3>
           <p>To provide high-quality agricultural exports by maintaining strict international standards, ensuring fresh arrival and sustainable grower partnerships.</p>
@@ -76,58 +80,55 @@
         </div>
       </div>
     </div>
+
   </main>
 
-  </p>
-</div>
-    <footer>
-  <div class="footer-content">
-    <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>
-    <p>Phone: +02 22662519 | Email: info@karmaglobal.net</p>
-    <p>&copy; 2026 Karma Global. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>
+      <p>Tel: +20 2 2266 2519 | Mobile: +20 104 217 6191 / +20 121 426 8785 | Email: info@karmaglobal.net</p>
+      <p>&copy; 2026 Karma Global. All rights reserved.</p>
+    </div>
+  </footer>
 
-<!<!-- Google Translate Script with Language Persistence -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'ar,en,fr',
-      autoDisplay: false
-    }, 'google_translate_element');
+  <!-- GOOGLE TRANSLATE SCRIPT -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ar,en,fr',
+        autoDisplay: false
+      }, 'google_translate_element');
 
-    // Automatically apply stored language once Google Translate initializes
-    var savedLang = localStorage.getItem('selectedLanguage');
-    if (savedLang && savedLang !== 'en') {
-      applyTranslation('en|' + savedLang);
+      var savedLang = localStorage.getItem('selectedLanguage');
+      if (savedLang && savedLang !== 'en') {
+        applyTranslation('en|' + savedLang);
+      }
     }
-  }
 
-  function doGTranslate(lang_pair) {
-    if (lang_pair.value) lang_pair = lang_pair.value;
-    if (lang_pair == '') return;
+    function doGTranslate(lang_pair) {
+      if (lang_pair.value) lang_pair = lang_pair.value;
+      if (lang_pair == '') return;
 
-    var lang = lang_pair.split('|')[1];
-
-    // Save the selected language to localStorage
-    localStorage.setItem('selectedLanguage', lang);
-
-    applyTranslation(lang_pair);
-  }
-
-  function applyTranslation(lang_pair) {
-    var lang = lang_pair.split('|')[1];
-    var teCombo = document.querySelector('select.goog-te-combo');
-
-    if (teCombo == null || teCombo.innerHTML == '') {
-      setTimeout(function() { applyTranslation(lang_pair); }, 300);
-    } else {
-      teCombo.value = lang;
-      teCombo.dispatchEvent(new Event('change'));
+      var lang = lang_pair.split('|')[1];
+      localStorage.setItem('selectedLanguage', lang);
+      applyTranslation(lang_pair);
     }
-  }
-</script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    function applyTranslation(lang_pair) {
+      var lang = lang_pair.split('|')[1];
+      var teCombo = document.querySelector('select.goog-te-combo');
+
+      if (teCombo == null || teCombo.innerHTML == '') {
+        setTimeout(function() { applyTranslation(lang_pair); }, 300);
+      } else {
+        teCombo.value = lang;
+        teCombo.dispatchEvent(new Event('change'));
+      }
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>

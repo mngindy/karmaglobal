@@ -11,28 +11,36 @@ body {
   background-color: #f8f9fa;
 }
 
+/* HEADER STYLING */
 header {
-  background-color: #1e293b;
-  color: #ffffff;
-  padding: 1.5rem 2rem;
+  background-color: #ffffff !important; /* Force clean white background */
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 100;
 }
 
-header h1 {
-  font-size: 1.5rem;
+/* LOGO IMAGE SIZE */
+.site-logo {
+  height: 60px !important;
+  width: auto;
+  display: block;
 }
 
+/* NAV LINKS FOR WHITE HEADER */
 nav a {
-  color: #ffffff;
+  color: #1e293b !important; /* Dark text visible on white header */
   text-decoration: none;
   margin-left: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #10b981 !important; /* Karma Global green */
 }
 /* HERO SLIDER CONTAINER */
 .hero-slider {
@@ -562,4 +570,31 @@ body {
 
 .photo-credit a:hover {
   color: #ffffff;
+}
+/* HEADER LOGO STYLING */
+/* HEADER (CLEAN WHITE) */
+header {
+  background-color: #ffffff;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 100;
+}
+
+/* HEADER LOGO */
+.site-logo {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+/* SECTION / BODY LOGO */
+.body-logo {
+  height: 45px;
+  width: auto;
+  display: block;
+  margin: 0 0 0.8rem 0;
 }
