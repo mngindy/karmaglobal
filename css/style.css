@@ -529,3 +529,37 @@ body {
   width: 100%;
   display: block;
 }
+/* PRODUCT CARD IMAGE & OVERLAY STYLES */
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-credit {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.photo-credit a {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.photo-credit a:hover {
+  color: #ffffff;
+}
