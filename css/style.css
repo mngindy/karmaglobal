@@ -599,97 +599,102 @@ header {
   margin: 0 0 0.8rem 0;
 }
 /* =========================================================
-   MOBILE RESPONSIVE STYLES (For Screens Under 768px)
+   COMPACT MOBILE RESPONSIVE STYLES (Under 768px)
    ========================================================= */
 @media screen and (max-width: 768px) {
 
-  /* 1. HEADER & NAVIGATION */
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 0.8rem;
+  /* 1. CONTAINER & PADDING */
+  .container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
-  header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem 1.2rem;
-    width: 100%;
-  }
-
-  header nav a {
-    font-size: 0.95rem;
-  }
-
-  .logo-container .site-logo {
-    max-height: 50px;
-    width: auto;
-  }
-
-  .lang-selector {
-    margin-top: 0.2rem;
-  }
-
-  /* 2. HERO SLIDER */
-  .hero-slider {
-    height: 480px; /* Reduces overall height on phones */
-  }
-
-  .hero-content {
-    padding: 1rem;
-    max-width: 90%;
-  }
-
-  .hero-content h2 {
-    font-size: 1.6rem !important; /* Prevents huge wrapping text */
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-content p {
-    font-size: 0.95rem !important;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-  }
-
-  .hero-content .btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-
-  /* Reposition slider arrows to avoid overlapping text */
-  .prev-slide, .next-slide {
-    padding: 0.4rem 0.7rem;
-    font-size: 1.2rem;
-    top: 50%;
-    background: rgba(0, 0, 0, 0.4);
-  }
-
-  .prev-slide { left: 5px; }
-  .next-slide { right: 5px; }
-
-  /* 3. PRODUCT CARDS & CATALOG GRID */
+  /* 2. COMPACT 2-COLUMN PRODUCT GRID */
   .product-grid {
-    grid-template-columns: 1fr !important; /* Stack cards 1 column wide */
-    gap: 1.5rem;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 Cards per row like PC */
+    gap: 0.6rem !important;
   }
 
+  /* 3. PRODUCT CARDS & IMAGES */
   .product-card {
-    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
   }
 
-  /* 4. BRAND INTRO SECTION */
-  .brand-intro {
-    padding: 2.5rem 1rem !important;
+  .product-img-wrapper {
+    height: 110px !important; /* Shorter header image */
   }
 
-  .brand-intro h2 {
-    font-size: 1.6rem !important;
+  .product-img {
+    height: 100% !important;
+    object-fit: cover;
   }
 
-  .brand-intro p {
-    font-size: 1rem !important;
+  .photo-credit {
+    font-size: 0.6rem !important;
+    padding: 2px 4px !important;
+  }
+
+  /* 4. COMPACT CARD CONTENT */
+  .product-info {
+    padding: 0.7rem 0.6rem !important;
+  }
+
+  .product-info h4 {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.2rem !important;
+    line-height: 1.2;
+  }
+
+  .product-info .category {
+    font-size: 0.7rem !important;
+    padding: 2px 6px !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .product-info .desc {
+    font-size: 0.78rem !important;
+    line-height: 1.35 !important;
+    color: #475569;
+    margin-bottom: 0.6rem !important;
+    /* Limit long descriptions to 3 lines on mobile */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 5. COMPACT SPECS LIST */
+  .product-info .specs {
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 0.4rem !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .product-info .specs li {
+    margin-bottom: 0.2rem !important;
+  }
+
+  /* 6. COMPACT PAGE & SECTION HEADERS */
+  .page-header {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .page-header h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .page-header p {
+    font-size: 0.85rem !important;
+  }
+
+  .section-title {
+    font-size: 1.2rem !important;
+    margin: 1.2rem 0 0.6rem 0 !important;
   }
 }
