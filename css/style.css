@@ -599,24 +599,89 @@ header {
   margin: 0 0 0.8rem 0;
 }
 /* =========================================================
-   COMPACT MOBILE RESPONSIVE STYLES (Under 768px)
+   UNIFIED MOBILE RESPONSIVE STYLES (Under 768px)
    ========================================================= */
 @media screen and (max-width: 768px) {
 
-  /* 1. CONTAINER & PADDING */
+  /* 1. HEADER & NAVIGATION FIX */
+  header {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0.8rem 0.5rem !important;
+    gap: 0.6rem !important;
+  }
+
+  header nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.4rem 0.8rem !important;
+    width: 100% !important;
+  }
+
+  header nav a {
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+  }
+
+  .logo-container .site-logo {
+    max-height: 45px !important;
+    width: auto !important;
+  }
+
+  .lang-selector {
+    margin-top: 0.2rem !important;
+  }
+
+  /* 2. HERO SLIDER RESPONSIVENESS */
+  .hero-slider {
+    height: 420px !important;
+  }
+
+  .hero-content {
+    padding: 0.8rem !important;
+    max-width: 92% !important;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  .hero-content p {
+    font-size: 0.88rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .hero-content .btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .prev-slide, .next-slide {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 1rem !important;
+    top: 50% !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .prev-slide { left: 4px !important; }
+  .next-slide { right: 4px !important; }
+
+  /* 3. COMPACT 2-COLUMN PRODUCT GRID */
   .container {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
 
-  /* 2. COMPACT 2-COLUMN PRODUCT GRID */
   .product-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* 2 Cards per row like PC */
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 0.6rem !important;
   }
 
-  /* 3. PRODUCT CARDS & IMAGES */
   .product-card {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -625,7 +690,7 @@ header {
   }
 
   .product-img-wrapper {
-    height: 110px !important; /* Shorter header image */
+    height: 110px !important;
   }
 
   .product-img {
@@ -634,42 +699,39 @@ header {
   }
 
   .photo-credit {
-    font-size: 0.6rem !important;
+    font-size: 0.58rem !important;
     padding: 2px 4px !important;
   }
 
-  /* 4. COMPACT CARD CONTENT */
   .product-info {
     padding: 0.7rem 0.6rem !important;
   }
 
   .product-info h4 {
-    font-size: 0.95rem !important;
+    font-size: 0.92rem !important;
     margin-bottom: 0.2rem !important;
     line-height: 1.2;
   }
 
   .product-info .category {
-    font-size: 0.7rem !important;
+    font-size: 0.68rem !important;
     padding: 2px 6px !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.4rem !important;
   }
 
   .product-info .desc {
     font-size: 0.78rem !important;
     line-height: 1.35 !important;
     color: #475569;
-    margin-bottom: 0.6rem !important;
-    /* Limit long descriptions to 3 lines on mobile */
+    margin-bottom: 0.5rem !important;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  /* 5. COMPACT SPECS LIST */
   .product-info .specs {
-    font-size: 0.75rem !important;
+    font-size: 0.72rem !important;
     line-height: 1.3 !important;
     border-top: 1px solid #E2E8F0;
     padding-top: 0.4rem !important;
@@ -680,7 +742,7 @@ header {
     margin-bottom: 0.2rem !important;
   }
 
-  /* 6. COMPACT PAGE & SECTION HEADERS */
+  /* 4. COMPACT PAGE HEADERS */
   .page-header {
     padding: 1.5rem 1rem !important;
   }
@@ -696,5 +758,17 @@ header {
   .section-title {
     font-size: 1.2rem !important;
     margin: 1.2rem 0 0.6rem 0 !important;
+  }
+
+  .brand-intro {
+    padding: 2.5rem 1rem !important;
+  }
+
+  .brand-intro h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .brand-intro p {
+    font-size: 0.95rem !important;
   }
 }
