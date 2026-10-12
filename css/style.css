@@ -598,3 +598,98 @@ header {
   display: block;
   margin: 0 0 0.8rem 0;
 }
+/* =========================================================
+   MOBILE RESPONSIVE STYLES (For Screens Under 768px)
+   ========================================================= */
+@media screen and (max-width: 768px) {
+
+  /* 1. HEADER & NAVIGATION */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.2rem;
+    width: 100%;
+  }
+
+  header nav a {
+    font-size: 0.95rem;
+  }
+
+  .logo-container .site-logo {
+    max-height: 50px;
+    width: auto;
+  }
+
+  .lang-selector {
+    margin-top: 0.2rem;
+  }
+
+  /* 2. HERO SLIDER */
+  .hero-slider {
+    height: 480px; /* Reduces overall height on phones */
+  }
+
+  .hero-content {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .hero-content h2 {
+    font-size: 1.6rem !important; /* Prevents huge wrapping text */
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem !important;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Reposition slider arrows to avoid overlapping text */
+  .prev-slide, .next-slide {
+    padding: 0.4rem 0.7rem;
+    font-size: 1.2rem;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .prev-slide { left: 5px; }
+  .next-slide { right: 5px; }
+
+  /* 3. PRODUCT CARDS & CATALOG GRID */
+  .product-grid {
+    grid-template-columns: 1fr !important; /* Stack cards 1 column wide */
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    margin-bottom: 1rem;
+  }
+
+  /* 4. BRAND INTRO SECTION */
+  .brand-intro {
+    padding: 2.5rem 1rem !important;
+  }
+
+  .brand-intro h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .brand-intro p {
+    font-size: 1rem !important;
+  }
+}
