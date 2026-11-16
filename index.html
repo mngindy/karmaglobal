@@ -24,15 +24,15 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- CUSTOM LANGUAGE SELECTOR -->
-    <div class="lang-selector">
-      <button class="lang-btn">🌐 Language ▾</button>
-      <div class="lang-dropdown">
-        <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
-        <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
-        <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
-      </div>
-    </div>
+   <!-- CUSTOM LANGUAGE SELECTOR -->
+<div class="lang-selector">
+  <button class="lang-btn">🌐 Language ▾</button>
+  <div class="lang-dropdown notranslate">
+    <a href="#" onclick="doGTranslate('en|en');return false;">English</a>
+    <a href="#" onclick="doGTranslate('en|ar');return false;">العربية</a>
+    <a href="#" onclick="doGTranslate('en|fr');return false;">Français</a>
+  </div>
+</div>
 
     <!-- Hidden Google Translate Element -->
     <div id="google_translate_element" style="display:none;"></div>
@@ -45,7 +45,7 @@
     <section class="hero-slider">
 
       <!-- Slide 1: Eureka Lemon -->
-      <div class="slide active" style="background-image: url('images/hero-lemon.jpg');">
+      <div class="slide slide-1 active" style="background-image: url('images/slider/hero-lemon.jpg');">
         <div class="hero-content">
           <h2>Fresh Eureka Lemons</h2>
           <p>Premium Egyptian citrus harvested for maximum juice content and rich aroma.</p>
@@ -54,7 +54,7 @@
       </div>
 
       <!-- Slide 2: Sweet Potato -->
-      <div class="slide" style="background-image: url('images/hero-sweetP.jpg');">
+      <div class="slide slide-2" style="background-image: url('images/slider/hero-sweetP.jpg');">
         <div class="hero-content">
           <h2>Egyptian Sweet Potatoes</h2>
           <p>High-sugar Beauregard and Bellevue varieties grown in rich Nile Delta soil.</p>
@@ -63,7 +63,7 @@
       </div>
 
       <!-- Slide 3: Fresh Strawberry -->
-      <div class="slide" style="background-image: url('images/hero-strawberries.jpg');">
+      <div class="slide slide-3" style="background-image: url('images/slider/hero-strawberries.jpg');">
         <div class="hero-content">
           <h2>Fresh Strawberries</h2>
           <p>Ruby-red, aromatic strawberries hand-picked during peak winter harvests.</p>
@@ -72,7 +72,7 @@
       </div>
 
       <!-- Slide 4: Onions -->
-      <div class="slide" style="background-image: url('images/hero-onions.jpg');">
+      <div class="slide slide-4" style="background-image: url('images/slider/hero-onions.jpg');">
         <div class="hero-content">
           <h2>Golden & Red Onions</h2>
           <p>Expertly cured bulbs engineered for long-distance international export shipping.</p>
@@ -81,7 +81,7 @@
       </div>
 
       <!-- Slide 5: Garlic -->
-      <div class="slide" style="background-image: url('images/hero-garlic.jpg');">
+      <div class="slide slide-5" style="background-image: url('images/slider/hero-garlic.jpg');">
         <div class="hero-content">
           <h2>Fresh & Cured Garlic</h2>
           <p>White and purple garlic varieties featuring firm bulbs and strong aroma.</p>
@@ -90,7 +90,7 @@
       </div>
 
       <!-- Slide 6: White Kidney Beans -->
-      <div class="slide" style="background-image: url('images/hero-white-beans.jpg');">
+      <div class="slide slide-6" style="background-image: url('images/slider/hero-white-beans.jpg');">
         <div class="hero-content">
           <h2>White Kidney Beans</h2>
           <p>Machine-cleaned, high-protein Cannellini beans sorted for global markets.</p>
@@ -99,7 +99,7 @@
       </div>
 
       <!-- Slide 7: Cowpeas -->
-      <div class="slide" style="background-image: url('images/Hero-cowpea.jpg');">
+      <div class="slide slide-7" style="background-image: url('images/slider/hero-cowpea.jpg');">
         <div class="hero-content">
           <h2>Black-Eyed Peas (Cowpeas)</h2>
           <p>Polished, high-grade dried cowpeas processed to strict purity standards.</p>
@@ -108,7 +108,7 @@
       </div>
 
       <!-- Slide 8: Fava Beans -->
-      <div class="slide" style="background-image: url('images/hero-fava-bean.jpg');">
+      <div class="slide slide-8" style="background-image: url('images/slider/hero-fava-bean.jpg');">
         <div class="hero-content">
           <h2>Egyptian Fava Beans</h2>
           <p>High-protein, machine-sorted dry fava beans processed for global food distribution.</p>
@@ -117,7 +117,7 @@
       </div>
 
       <!-- Slide 9: Whole Cumin Seeds -->
-      <div class="slide" style="background-image: url('images/hero-cumin.png');">
+      <div class="slide slide-9" style="background-image: url('images/slider/hero-cumin.png');">
         <div class="hero-content">
           <h2>Whole Cumin Seeds</h2>
           <p>99%+ purity sun-dried aromatic cumin seeds rich in essential oils and flavor.</p>
@@ -125,124 +125,43 @@
         </div>
       </div>
 
-      <!-- Slider Controls -->
-      <button class="prev-slide">&#10094;</button>
-      <button class="next-slide">&#10095;</button>
-
-    </section>
-
-    <!-- 2. BRAND INTRO & FEATURE SECTION (WITH SECTION LOGO) -->
-    <section class="brand-intro container" style="padding: 4rem 1.5rem; text-align: center;">
-
-      <!-- BODY SECTION LOGO -->
-      <img src="images/logo.png" alt="Karma Global Logo" class="body-logo" style="margin: 0 auto 1.5rem auto;">
-
-      <h2 style="font-size: 2.2rem; color: #0f172a; margin-bottom: 0.8rem;">For Fresh Fruits, Vegetables, and Legumes</h2>
-      <p style="font-size: 1.15rem; color: #475569; max-width: 800px; margin: 0 auto 1.5rem auto;">
-        Karma Global delivers high-grade Egyptian produce—from vibrant citrus and tubers to machine-sorted dried pulses—processed to strict international export standards.
-      </p>
-
-      <div style="display: inline-block; margin-top: 1rem;">
-        <a href="products.html" class="btn">View Our Full Product Catalog</a>
+      <!-- Slide 10: Pure Egyptian Aromatic Oils -->
+      <div class="slide slide-10" style="background-image: url('images/slider/hero-oils.jpg');">
+        <div class="hero-content">
+          <h2>Pure Egyptian Aromatic & Essential Oils</h2>
+          <p>Premium Egyptian Aromatic & Essential Oils, Bulk-Exported Worldwide.</p>
+          <a href="products.html" class="btn">Explore Product Catalog</a>
+        </div>
       </div>
 
+      <!-- Slider Controls -->
+      <button class="prev-slide" aria-label="Previous slide">❮</button>
+      <button class="next-slide" aria-label="Next slide">❯</button>
+
     </section>
 
+   <!-- 2. BRAND INTRO & FEATURE SECTION -->
+<section class="brand-intro container">
+  <img src="images/logo.png" alt="Karma Global Logo" class="body-logo" style="margin: 0 auto 1.5rem auto;">
+  <h2>For Fresh Fruits, Vegetables, and Legumes</h2>
+  <p>
+    Karma Global delivers high-grade Egyptian produce—from vibrant citrus and tubers to machine-sorted dried pulses—processed to strict international export standards.
+  </p>
+  <div style="display: inline-block; margin-top: 1rem;">
+    <a href="products.html" class="btn" style="background-color: #2563eb; color: #ffffff;">View Our Full Product Catalog</a>
+  </div>
+</section>
   </main>
 
-  <!-- FOOTER -->
+ <!-- FOOTER -->
   <footer>
     <div class="footer-content">
-      <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>      <p>Tel: +20 2 2266 2519 | Mobile: +20 104 217 6191 / +20 121 426 8785 | Email: info@karmaglobal.org</p>
       <p>&copy; 2026 Karma Global. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- GOOGLE TRANSLATE SCRIPT -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'ar,en,fr',
-        autoDisplay: false
-      }, 'google_translate_element');
-
-      var savedLang = localStorage.getItem('selectedLanguage');
-      if (savedLang && savedLang !== 'en') {
-        applyTranslation('en|' + savedLang);
-      }
-    }
-
-    function doGTranslate(lang_pair) {
-      if (lang_pair.value) lang_pair = lang_pair.value;
-      if (lang_pair == '') return;
-
-      var lang = lang_pair.split('|')[1];
-      localStorage.setItem('selectedLanguage', lang);
-      applyTranslation(lang_pair);
-    }
-
-    function applyTranslation(lang_pair) {
-      var lang = lang_pair.split('|')[1];
-      var teCombo = document.querySelector('select.goog-te-combo');
-
-      if (teCombo == null || teCombo.innerHTML == '') {
-        setTimeout(function() { applyTranslation(lang_pair); }, 300);
-      } else {
-        teCombo.value = lang;
-        teCombo.dispatchEvent(new Event('change'));
-      }
-    }
-  </script>
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  <!-- HERO SLIDER SCRIPT -->
-  <script type="text/javascript">
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.hero-slider .slide');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-          slide.classList.add('active');
-        }
-      });
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      showSlide(currentSlide);
-    }
-
-    let slideInterval = setInterval(nextSlide, 5000);
-
-    const nextBtn = document.querySelector('.next-slide');
-    const prevBtn = document.querySelector('.prev-slide');
-
-    if (nextBtn && prevBtn) {
-      nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetInterval();
-      });
-
-      prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetInterval();
-      });
-    }
-
-    function resetInterval() {
-      clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, 5000);
-    }
-  </script>
-
+  <!-- SCRIPTS -->
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

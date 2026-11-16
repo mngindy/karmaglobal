@@ -34,7 +34,6 @@
       </div>
     </div>
 
-    <!-- Hidden Google Translate Element -->
     <div id="google_translate_element" style="display:none;"></div>
   </header>
 
@@ -45,31 +44,32 @@
   </section>
 
   <!-- MAIN ABOUT CONTENT -->
-  <main class="container" style="padding: 3rem 1.5rem;">
+  <main class="container">
 
-    <!-- BRAND INTRO BLOCK (LEFT ALIGNED LIKE EXAMPLE) -->
-    <div style="text-align: left; margin-bottom: 2rem;">
-    <img src="images/logo.png" alt="Karma Global Logo" class="body-logo">
-    <h2 style="font-size: 1.8rem; color: #0f172a; margin-bottom: 0.5rem; font-weight: 700;">For Fresh Fruits, Vegetables, and Beans</h2>
-    <p style="color: #64748b; font-size: 1.05rem; max-width: 750px;">Legumes like white beans, kidney beans, and broad beans.</p>
+    <!-- BRAND INTRO BLOCK -->
+    <div class="page-intro-left">
+      <img src="images/logo.png" alt="Karma Global Logo" class="body-logo">
+      <h2>For Fresh Fruits, Vegetables, and Beans</h2>
+      <p>Legumes like white beans, kidney beans, and broad beans.</p>
     </div>
 
     <!-- EXECUTIVE LEADERSHIP -->
-    <div class="management-section" style="margin-bottom: 2.5rem; background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2563eb; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <div class="management-section">
       <h3>Executive Leadership</h3>
       <p style="margin-top: 0.5rem;"><strong>Dr. Khaled Abd Elrashed</strong></p>
       <p style="color: #64748b; font-weight: 500;">General Manager</p>
       <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #475569;">
-        Email: <a href="mailto:kh@karmaglobal.org" style="color: #2563eb;">kh@karmaglobal.org</a>
+        <strong>Phone:</strong> <a href="tel:+201003735357" style="color: #2563eb;">+20 100 373 5357</a><br>
+        <strong>Email:</strong> <a href="mailto:kh@karmaglobal.org" style="color: #2563eb;">kh@karmaglobal.org</a>
       </p>
     </div>
 
     <!-- COMPANY OVERVIEW & VALUES -->
     <div class="about-section">
       <h3>Our Company Overview</h3>
-      <p>Karma Global is an international trading and export enterprise specializing in premium-quality fresh fruits, vegetables, and legumes. By combining agricultural expertise with strict supply chain management, we deliver fresh produce to markets worldwide.</p>
+      <p style="margin-top: 0.5rem; color: #475569;">Karma Global is an international trading and export enterprise specializing in premium-quality fresh fruits, vegetables, and legumes. By combining agricultural expertise with strict supply chain management, we deliver fresh produce to markets worldwide.</p>
 
-      <div class="vision-mission-grid" style="margin-top: 2rem;">
+      <div class="vision-mission-grid">
         <div class="card">
           <h3>Our Mission</h3>
           <p>To provide high-quality agricultural exports by maintaining strict international standards, ensuring fresh arrival and sustainable grower partnerships.</p>
@@ -88,46 +88,12 @@
     <div class="footer-content">
       <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>
       <p>Tel: +20 2 2266 2519 | Mobile: +20 104 217 6191 / +20 121 426 8785 | Email: info@karmaglobal.org</p>
-      <p>&copy; 2026 Karma Global. All rights reserved.</p>
+      <p>© 2026 Karma Global. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- GOOGLE TRANSLATE SCRIPT -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'ar,en,fr',
-        autoDisplay: false
-      }, 'google_translate_element');
-
-      var savedLang = localStorage.getItem('selectedLanguage');
-      if (savedLang && savedLang !== 'en') {
-        applyTranslation('en|' + savedLang);
-      }
-    }
-
-    function doGTranslate(lang_pair) {
-      if (lang_pair.value) lang_pair = lang_pair.value;
-      if (lang_pair == '') return;
-
-      var lang = lang_pair.split('|')[1];
-      localStorage.setItem('selectedLanguage', lang);
-      applyTranslation(lang_pair);
-    }
-
-    function applyTranslation(lang_pair) {
-      var lang = lang_pair.split('|')[1];
-      var teCombo = document.querySelector('select.goog-te-combo');
-
-      if (teCombo == null || teCombo.innerHTML == '') {
-        setTimeout(function() { applyTranslation(lang_pair); }, 300);
-      } else {
-        teCombo.value = lang;
-        teCombo.dispatchEvent(new Event('change'));
-      }
-    }
-  </script>
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>

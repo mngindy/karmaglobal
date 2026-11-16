@@ -3,71 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karma Global</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-  <div class="logo-container">
-    <a href="index.html">
-      <img src="images/logo.png" alt="Karma Global Logo" class="site-logo">
-    </a>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="export-process.html">Export Process</a>
-    <a href="certificates.html">Certifications</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- CUSTOM LANGUAGE SELECTOR -->
-  <div class="lang-selector">
-    <button class="lang-btn">🌐 Language ▾</button>
-    <div class="lang-dropdown">
-      <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
-      <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
-      <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
-    </div>
-  </div>
-
-  <div id="google_translate_element" style="display:none;"></div>
-</header>
-
-  <!-- Main content goes here for each specific page -->
-
-
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karma Global - Export Process</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- SITE HEADER -->
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Karma Global Logo" class="site-logo">
+      </a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="export-process.html">Export Process</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- CUSTOM LANGUAGE SELECTOR -->
+    <div class="lang-selector">
+      <button class="lang-btn">🌐 Language ▾</button>
+      <div class="lang-dropdown">
+        <a href="#" onclick="doGTranslate('en|en');return false;">🇬🇧 English</a>
+        <a href="#" onclick="doGTranslate('en|ar');return false;">🇪🇬 العربية</a>
+        <a href="#" onclick="doGTranslate('en|fr');return false;">🇫🇷 Français</a>
+      </div>
+    </div>
+
+    <div id="google_translate_element" style="display:none;"></div>
+  </header>
+
   <!-- PAGE HEADER HERO -->
   <section class="page-header export-header">
-  <h2>Our Export Process</h2>
-  <p>From farm harvest to international delivery with strict cold-chain logistics.</p>
-</section>
+    <h2>Our Export Process</h2>
+    <p>From farm harvest to international delivery with strict cold-chain logistics.</p>
+  </section>
 
   <!-- MAIN PROCESS CONTENT -->
   <main class="container">
-    
+
     <div class="timeline">
 
       <!-- Step 1 -->
       <div class="timeline-step">
         <div class="step-number">01</div>
         <div class="step-content">
-          <h3>1. Sourcing & Harvesting</h3>
+          <h3>Sourcing & Harvesting</h3>
           <p>We work directly with certified global farms to harvest produce at optimal maturity levels, ensuring peak freshness, color, and sugar content for export.</p>
         </div>
       </div>
@@ -76,7 +61,7 @@
       <div class="timeline-step">
         <div class="step-number">02</div>
         <div class="step-content">
-          <h3>2. Sorting & Quality Inspection</h3>
+          <h3>Sorting & Quality Inspection</h3>
           <p>Harvested produce undergoes rigorous automated and manual sorting. Products are graded by size, weight, color, and external condition to filter out defects.</p>
         </div>
       </div>
@@ -85,7 +70,7 @@
       <div class="timeline-step">
         <div class="step-number">03</div>
         <div class="step-content">
-          <h3>3. Washing & Export Packaging</h3>
+          <h3>Washing & Export Packaging</h3>
           <p>Produce is thoroughly cleaned, treated according to phytosanitary standards, and packed into international-standard telescopic cartons, open-top boxes, or mesh bags.</p>
         </div>
       </div>
@@ -94,7 +79,7 @@
       <div class="timeline-step">
         <div class="step-number">04</div>
         <div class="step-content">
-          <h3>4. Cold Chain Management</h3>
+          <h3>Cold Chain Management</h3>
           <p>Products are precooled and stored in temperature- and humidity-controlled cold rooms to preserve shelf life and preserve maximum nutritional value.</p>
         </div>
       </div>
@@ -103,7 +88,7 @@
       <div class="timeline-step">
         <div class="step-number">05</div>
         <div class="step-content">
-          <h3>5. Shipping & Customs Clearance</h3>
+          <h3>Shipping & Customs Clearance</h3>
           <p>Cargo is loaded into 40ft refrigerated (Reefer) sea containers or dispatched via air freight with full documentation (Bill of Lading, Phytosanitary Certificate, Certificate of Origin).</p>
         </div>
       </div>
@@ -121,52 +106,16 @@
 
   <!-- FOOTER -->
   <footer>
-  <div class="footer-content">
-    <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>
-    <p>Phone: +02 22662519 | Email: info@karmaglobal.org</p>
-    <p>&copy; 2026 Karma Global. All rights reserved.</p>
-  </div>
-</footer>
-<!-- Google Translate Script with Language Persistence -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'ar,en,fr',
-      autoDisplay: false
-    }, 'google_translate_element');
+    <div class="footer-content">
+      <p><strong>Karma Global</strong> | 11 Omar Ibn El-Khattab St., Sheraton, Cairo, Egypt</p>
+      <p>Tel: +20 2 2266 2519 | Mobile: +20 104 217 6191 / +20 121 426 8785 | Email: info@karmaglobal.org</p>
+      <p>© 2026 Karma Global. All rights reserved.</p>
+    </div>
+  </footer>
 
-    // Automatically apply stored language once Google Translate initializes
-    var savedLang = localStorage.getItem('selectedLanguage');
-    if (savedLang && savedLang !== 'en') {
-      applyTranslation('en|' + savedLang);
-    }
-  }
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  function doGTranslate(lang_pair) {
-    if (lang_pair.value) lang_pair = lang_pair.value;
-    if (lang_pair == '') return;
-
-    var lang = lang_pair.split('|')[1];
-
-    // Save the selected language to localStorage
-    localStorage.setItem('selectedLanguage', lang);
-
-    applyTranslation(lang_pair);
-  }
-
-  function applyTranslation(lang_pair) {
-    var lang = lang_pair.split('|')[1];
-    var teCombo = document.querySelector('select.goog-te-combo');
-
-    if (teCombo == null || teCombo.innerHTML == '') {
-      setTimeout(function() { applyTranslation(lang_pair); }, 300);
-    } else {
-      teCombo.value = lang;
-      teCombo.dispatchEvent(new Event('change'));
-    }
-  }
-</script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

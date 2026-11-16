@@ -1,3 +1,7 @@
+/* =========================================================
+   KARMA GLOBAL - MASTER STYLESHEET
+   ========================================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,12 +13,41 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f8f9fa;
+  top: 0px !important;
 }
 
-/* HEADER STYLING */
+/* Hide Google Translate Top Banner & Prevent Body Shift */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+iframe.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+html {
+  margin-top: 0px !important;
+}
+
+/* Hide Google Translate hover tooltip popup */
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
+  display: none !important;
+}
+
+/* =========================================================
+   1. HEADER STYLING & LOGO
+   ========================================================= */
 header {
-  background-color: #ffffff !important; /* Force clean white background */
-  padding: 1rem 2rem;
+  background-color: #ffffff !important;
+  padding: 0.8rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,16 +56,21 @@ header {
   z-index: 100;
 }
 
-/* LOGO IMAGE SIZE */
 .site-logo {
-  height: 60px !important;
+  height: 50px !important;
   width: auto;
   display: block;
 }
 
-/* NAV LINKS FOR WHITE HEADER */
+.body-logo {
+  height: 45px;
+  width: auto;
+  display: block;
+  margin: 0 0 0.8rem 0;
+}
+
 nav a {
-  color: #1e293b !important; /* Dark text visible on white header */
+  color: #1e293b !important;
   text-decoration: none;
   margin-left: 1.5rem;
   font-weight: 600;
@@ -40,14 +78,77 @@ nav a {
 }
 
 nav a:hover {
-  color: #10b981 !important; /* Karma Global green */
+  color: #10b981 !important;
 }
-/* HERO SLIDER CONTAINER */
+
+/* Language Dropdown Selector */
+.lang-selector {
+  position: relative;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.lang-btn {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 1px solid #334155;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.lang-btn:hover {
+  background-color: #1e293b;
+}
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 4px;
+  background-color: #1e293b;
+  min-width: 140px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.lang-dropdown a {
+  color: #ffffff;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.lang-dropdown a:hover {
+  background-color: #2563eb;
+}
+
+.lang-selector:hover .lang-dropdown,
+.lang-selector.open .lang-dropdown {
+  display: block;
+}
+
+#google_translate_element {
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* =========================================================
+   2. HERO SLIDER CONTAINER & JS SLIDER (10 SLIDES)
+   ========================================================= */
 .hero-slider {
   position: relative;
   height: 550px;
   overflow: hidden;
   color: white;
+  background-color: #0f172a;
 }
 
 .hero-slider .slide {
@@ -57,7 +158,8 @@ nav a:hover {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -66,8 +168,23 @@ nav a:hover {
   text-align: center;
 }
 
+.hero-slider .slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.42);
+  z-index: 1;
+}
+
 .hero-slider .slide.active {
   opacity: 1;
+  visibility: visible;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem;
 }
 
 .hero-content h2 {
@@ -84,20 +201,21 @@ nav a:hover {
 
 .btn {
   display: inline-block;
-  background-color: #2563eb;
-  color: white;
-  padding: 0.8rem 1.6rem;
-  border-radius: 6px;
+  background: #ffffff;
+  color: #2563eb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #1d4ed8;
+  background-color: #f1f5f9;
 }
 
-/* SLIDER ARROWS */
+/* Slider Controls */
 .prev-slide, .next-slide {
   position: absolute;
   top: 50%;
@@ -119,20 +237,14 @@ nav a:hover {
 
 .prev-slide { left: 20px; }
 .next-slide { right: 20px; }
-.btn {
-  display: inline-block;
-  background: #ffffff;
-  color: #2563eb;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
 
+/* =========================================================
+   3. GENERAL LAYOUT, CARDS & CONTAINERS
+   ========================================================= */
 .container {
   max-width: 1000px;
   margin: 3rem auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .features {
@@ -148,18 +260,30 @@ nav a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-footer {
+.brand-intro {
+  padding: 4rem 1.5rem;
   text-align: center;
-  padding: 2rem;
-  background-color: #e2e8f0;
-  margin-top: 3rem;
-  color: #64748b;
 }
-/* Styling for Products Page */
-/* --- BASE INNER PAGE HEADER --- */
+
+.brand-intro h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 0.8rem;
+}
+
+.brand-intro p {
+  font-size: 1.15rem;
+  color: #475569;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* =========================================================
+   4. PRODUCTS PAGE & CARDS
+   ========================================================= */
 .page-header {
   position: relative;
-  background-color: #0f172a; /* Fallback dark color if image is loading */
+  background-color: #0f172a;
   background-size: cover;
   background-position: center;
   color: white;
@@ -180,26 +304,12 @@ footer {
   margin: 0 auto;
 }
 
-/* --- PAGE-SPECIFIC BACKGROUND HERO IMAGES --- */
-.products-header {
-  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/products-hero.jpg');
-}
-
-.about-header {
-  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/about-hero.jpg');
-}
-
-.export-header {
-  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/export-hero.jpg');
-}
-
-.certs-header {
-  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/certs-hero.jpg');
-}
-
-.contact-header {
-  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/contact-hero.jpg');
-}
+/* Section Hero Backgrounds */
+.products-header { background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/products-hero.jpg'); }
+.about-header    { background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/about-hero.jpg'); }
+.export-header   { background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/export-hero.jpg'); }
+.certs-header    { background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/certs-hero.jpg'); }
+.contact-header  { background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('../images/contact-hero.jpg'); }
 
 .section-title {
   font-size: 1.8rem;
@@ -216,23 +326,57 @@ footer {
   gap: 2rem;
 }
 
+.product-grid.single-featured {
+  max-width: 480px;
+}
+
 .product-card {
   background: white;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
 }
 
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .product-img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  background-color: #cbd5e1; /* Placeholder grey color when no image is loaded */
+  display: block;
+  background-color: #cbd5e1;
+}
+
+.photo-credit {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.photo-credit a {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.photo-credit a:hover {
+  color: #ffffff;
 }
 
 .product-info {
@@ -273,7 +417,10 @@ footer {
 .specs li {
   margin-bottom: 0.4rem;
 }
-/* --- EXPORT PROCESS STYLES --- */
+
+/* =========================================================
+   5. EXPORT PROCESS & CERTIFICATIONS
+   ========================================================= */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -332,7 +479,7 @@ footer {
   margin-bottom: 1.5rem;
   color: #94a3b8;
 }
-/* --- CERTIFICATIONS PAGE STYLES --- */
+
 .cert-intro {
   text-align: center;
   max-width: 800px;
@@ -404,7 +551,37 @@ footer {
   font-size: 0.95rem;
   color: #334155;
 }
-/* --- ABOUT & CONTACT PAGE STYLES --- */
+
+/* =========================================================
+   6. ABOUT, CONTACT & MAPS
+   ========================================================= */
+.page-intro-left {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.page-intro-left h2 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.page-intro-left p {
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 750px;
+}
+
+.management-section {
+  margin-bottom: 2.5rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #2563eb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
 .vision-mission-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -422,10 +599,25 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+.contact-info h3,
+.contact-form h3 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
 .contact-info p {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #334155;
+}
+
+.contact-info a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 .contact-form {
@@ -448,6 +640,7 @@ footer {
   border-radius: 4px;
   font-size: 1rem;
   font-family: inherit;
+  width: 100%;
 }
 
 .contact-form button {
@@ -456,70 +649,11 @@ footer {
   color: white;
   border: none;
 }
-#google_translate_element {
-  margin-left: 1rem;
-  display: inline-block;
-  vertical-align: middle;
-}
-/* CLEAN LANGUAGE DROPDOWN */
-.lang-selector {
-  position: relative;
-  display: inline-block;
-  margin-left: 1.5rem;
+
+.contact-form button:hover {
+  background: #1d4ed8;
 }
 
-.lang-btn {
-  background-color: #0f172a;
-  color: #ffffff;
-  border: 1px solid #334155;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.lang-btn:hover {
-  background-color: #1e293b;
-}
-
-.lang-dropdown {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  background-color: #1e293b;
-  min-width: 130px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-  overflow: hidden;
-  z-index: 100;
-}
-
-.lang-dropdown a {
-  color: #ffffff;
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  display: block;
-  font-size: 0.85rem;
-}
-
-.lang-dropdown a:hover {
-  background-color: #2563eb;
-}
-
-.lang-selector:hover .lang-dropdown {
-  display: block;
-}
-
-/* Hide top Google bar */
-body {
-  top: 0px !important;
-}
-.goog-te-banner-frame {
-  display: none !important;
-}
-/* GOOGLE MAPS EMBED STYLING */
 .map-section {
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -535,195 +669,184 @@ body {
 
 .map-container iframe {
   width: 100%;
-  display: block;
-}
-/* PRODUCT CARD IMAGE & OVERLAY STYLES */
-.product-img-wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.product-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: 400px;
+  border: 0;
   display: block;
 }
 
-.photo-credit {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(15, 23, 42, 0.75);
-  color: #ffffff;
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  border-radius: 4px;
-  z-index: 2;
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e2e8f0;
+  margin-top: 3rem;
+  color: #64748b;
 }
 
-.photo-credit a {
-  color: #93c5fd;
-  text-decoration: underline;
-}
-
-.photo-credit a:hover {
-  color: #ffffff;
-}
-/* HEADER LOGO STYLING */
-/* HEADER (CLEAN WHITE) */
-header {
-  background-color: #ffffff;
-  padding: 0.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  position: relative;
-  z-index: 100;
-}
-
-/* HEADER LOGO */
-.site-logo {
-  height: 50px;
-  width: auto;
-  display: block;
-}
-
-/* SECTION / BODY LOGO */
-.body-logo {
-  height: 45px;
-  width: auto;
-  display: block;
-  margin: 0 0 0.8rem 0;
-}
 /* =========================================================
-   UNIFIED MOBILE RESPONSIVE STYLES (Under 768px)
+   7. UNIFIED MOBILE RESPONSIVE STYLES (Under 768px)
    ========================================================= */
 @media screen and (max-width: 768px) {
 
-  /* 1. HEADER & NAVIGATION FIX */
+  /* Header Navigation Fix */
   header {
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 0.8rem 0.5rem !important;
-    gap: 0.6rem !important;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0.75rem;
+    gap: 0.6rem;
   }
 
   header nav {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 0.4rem 0.8rem !important;
-    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 0.9rem;
+    width: 100%;
   }
 
   header nav a {
-    font-size: 0.85rem !important;
-    white-space: nowrap !important;
+    margin-left: 0;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
 
   .logo-container .site-logo {
-    max-height: 45px !important;
-    width: auto !important;
+    max-height: 45px;
+    width: auto;
   }
 
   .lang-selector {
-    margin-top: 0.2rem !important;
+    margin-left: 0;
+    margin-top: 0.2rem;
   }
 
-  /* 2. HERO SLIDER RESPONSIVENESS */
+  .lang-dropdown {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Hero Slider Responsiveness */
   .hero-slider {
-    height: 420px !important;
+    height: 400px;
   }
 
   .hero-content {
-    padding: 0.8rem !important;
-    max-width: 92% !important;
+    padding: 0 2.2rem;
+    max-width: 100%;
   }
 
   .hero-content h2 {
-    font-size: 1.5rem !important;
-    line-height: 1.2 !important;
-    margin-bottom: 0.4rem !important;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
   }
 
   .hero-content p {
-    font-size: 0.88rem !important;
-    line-height: 1.35 !important;
-    margin-bottom: 0.8rem !important;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
   }
 
   .hero-content .btn {
-    padding: 0.5rem 1rem !important;
-    font-size: 0.85rem !important;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.85rem;
   }
 
   .prev-slide, .next-slide {
-    padding: 0.3rem 0.6rem !important;
-    font-size: 1rem !important;
-    top: 50% !important;
-    background: rgba(0, 0, 0, 0.4) !important;
+    padding: 0.4rem 0.65rem;
+    font-size: 1.1rem;
+    background: rgba(15, 23, 42, 0.6);
   }
 
-  .prev-slide { left: 4px !important; }
-  .next-slide { right: 4px !important; }
+  .prev-slide { left: 6px; }
+  .next-slide { right: 6px; }
 
-  /* 3. COMPACT 2-COLUMN PRODUCT GRID */
+  /* General Container & Intro */
   .container {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
+    margin: 1.5rem auto;
+    padding: 0 0.85rem;
   }
 
+  .page-header {
+    padding: 2rem 1rem;
+  }
+
+  .page-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .page-header p {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.8rem 0;
+  }
+
+  .brand-intro {
+    padding: 2.5rem 1rem;
+  }
+
+  .brand-intro h2 {
+    font-size: 1.5rem;
+  }
+
+  .brand-intro p {
+    font-size: 0.95rem;
+  }
+
+  .page-intro-left h2 {
+    font-size: 1.4rem;
+  }
+
+  .page-intro-left p {
+    font-size: 0.92rem;
+  }
+
+  /* Compact 2-Column Product Grid */
   .product-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.6rem !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
   }
 
-  .product-card {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
+  .product-grid.single-featured {
+    max-width: 100%;
   }
 
   .product-img-wrapper {
-    height: 110px !important;
+    height: 115px;
   }
 
   .product-img {
-    height: 100% !important;
-    object-fit: cover;
+    height: 100%;
   }
 
   .photo-credit {
-    font-size: 0.58rem !important;
-    padding: 2px 4px !important;
+    font-size: 0.58rem;
+    padding: 2px 4px;
   }
 
   .product-info {
-    padding: 0.7rem 0.6rem !important;
+    padding: 0.7rem 0.6rem;
   }
 
   .product-info h4 {
-    font-size: 0.92rem !important;
-    margin-bottom: 0.2rem !important;
+    font-size: 0.92rem;
+    margin-bottom: 0.2rem;
     line-height: 1.2;
   }
 
   .product-info .category {
-    font-size: 0.68rem !important;
-    padding: 2px 6px !important;
-    margin-bottom: 0.4rem !important;
+    font-size: 0.68rem;
+    padding: 2px 6px;
+    margin-bottom: 0.4rem;
   }
 
   .product-info .desc {
-    font-size: 0.78rem !important;
-    line-height: 1.35 !important;
-    color: #475569;
-    margin-bottom: 0.5rem !important;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -731,44 +854,90 @@ header {
   }
 
   .product-info .specs {
-    font-size: 0.72rem !important;
-    line-height: 1.3 !important;
-    border-top: 1px solid #E2E8F0;
-    padding-top: 0.4rem !important;
-    margin-top: 0.4rem !important;
+    font-size: 0.72rem;
+    line-height: 1.3;
+    padding-top: 0.4rem;
+    margin-top: 0.4rem;
   }
 
   .product-info .specs li {
-    margin-bottom: 0.2rem !important;
+    margin-bottom: 0.2rem;
   }
 
-  /* 4. COMPACT PAGE HEADERS */
-  .page-header {
-    padding: 1.5rem 1rem !important;
+  /* Export Process & Certifications */
+  .timeline {
+    gap: 1rem;
+    margin: 1.2rem 0;
   }
 
-  .page-header h2 {
-    font-size: 1.4rem !important;
+  .timeline-step {
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 0.75rem;
   }
 
-  .page-header p {
-    font-size: 0.85rem !important;
+  .step-number {
+    font-size: 1.3rem;
+    margin-right: 0;
+    padding: 0.4rem 0.8rem;
   }
 
-  .section-title {
-    font-size: 1.2rem !important;
-    margin: 1.2rem 0 0.6rem 0 !important;
+  .step-content h3 {
+    font-size: 1.15rem;
   }
 
-  .brand-intro {
-    padding: 2.5rem 1rem !important;
+  .step-content p {
+    font-size: 0.9rem;
   }
 
-  .brand-intro h2 {
-    font-size: 1.5rem !important;
+  .cta-banner {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
   }
 
-  .brand-intro p {
-    font-size: 0.95rem !important;
+  .cta-banner h3 {
+    font-size: 1.35rem;
+  }
+
+  .cta-banner p {
+    font-size: 0.92rem;
+  }
+
+  .cert-intro {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cert-card {
+    padding: 1.25rem;
+  }
+
+  .compliance-box {
+    padding: 1.25rem;
+  }
+
+  .doc-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* About & Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1.25rem;
+  }
+
+  .map-container iframe {
+    height: 260px;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
   }
 }
